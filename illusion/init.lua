@@ -2,80 +2,94 @@ print("This file will be run at load time!")
 
 -- Define all craftitems and nodes
 
+minetest.register_node("illusion:test_node", {
+	tiles = {
+		"SquareWormhole.png"
+	},
+	is_ground_content = true,
+	groups = {cracky = 3},
+	drawtype = "nodebox",
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{0, -0.5, -0.5, 0.5, 2.98023e-08, 0}, -- NodeBox1
+		}
+	}
+})
+
 minetest.register_node("illusion:blue_supernova", {
 	description = "Blow your mind with this estatic blue supernova!",
 	tiles = {
-		"BlueSupernova.png",
-		"BlueSupernova.png",
-		"BlueSupernova.png",
-		"BlueSupernova.png",
-		"BlueSupernova.png",
 		"BlueSupernova.png"
 	},
 	is_ground_content = true,
 	groups = {cracky = 3},
-	drop = {"illusion:beaty_shard 1", "illusion:illusional_shard 8"}
+	drop = {
+        items = {
+            {items = {"illusion:illusional_shard 1"}},
+            {items = {"illusion:beaty_shard 8"}}
+        }
+    },
 })
 
 minetest.register_node("illusion:square_wormhole", {
 	description = "Blow your mind with this mind-bending squared wormhole!",
 	tiles = {
-		"SquareWormhole.png",
-		"SquareWormhole.png",
-		"SquareWormhole.png",
-		"SquareWormhole.png",
-		"SquareWormhole.png",
 		"SquareWormhole.png"
 	},
 	is_ground_content = true,
 	groups = {cracky = 3},
-	drop = {"illusion:beaty_shard 8", "illusion:illusional_shard 1"}
+	drop = {
+        items = {
+            {items = {"illusion:illusional_shard 8"}},
+            {items = {"illusion:beaty_shard 1"}}
+        }
+    },
 })
 
 minetest.register_node("illusion:quad_circle", {
 	description = "Blow your mind with this deep four circles",
 	tiles = {
-		"CirclingQuadtriple.png",
-		"CirclingQuadtriple.png",
-		"CirclingQuadtriple.png",
-		"CirclingQuadtriple.png",
-		"CirclingQuadtriple.png",
 		"CirclingQuadtriple.png"
 	},
 	is_ground_content = true,
 	groups = {cracky = 3},
-	drop = {"illusion:beaty_shard 8", "illusion:illusional_shard 1"}
+	drop = {
+        items = {
+            {items = {"illusion:illusional_shard 4"}},
+            {items = {"illusion:beaty_shard 5"}}
+        }
+    },
 })
 
 minetest.register_node("illusion:stacked_squares", {
 	description = "Blow your mind with these squares in squares",
 	tiles = {
-		"StackedSquares.png",
-		"StackedSquares.png",
-		"StackedSquares.png",
-		"StackedSquares.png",
-		"StackedSquares.png",
 		"StackedSquares.png"
 	},
 	is_ground_content = true,
 	groups = {cracky = 3},
-	drop = {"illusion:beaty_shard 8", "illusion:illusional_shard 1"}
+	drop = {
+        items = {
+            {items = {"illusion:illusional_shard 3"}},
+            {items = {"illusion:beaty_shard 6"}}
+        }
+    },
 })
 
 minetest.register_node("illusion:bendy_circles", {
 	description = "Blow your mind with these bent circles",
 	tiles = {
-		"OpticalYellowPurple.png",
-		"OpticalYellowPurple.png",
-		"OpticalYellowPurple.png",
-		"OpticalYellowPurple.png",
-		"OpticalYellowPurple.png",
 		"OpticalYellowPurple.png"
 	},
 	is_ground_content = true,
 	groups = {cracky = 3},
-	drop = {"illusion:beaty_shard 8", "illusion:illusional_shard 1"}
-})
+	drop = {
+        items = {
+            {items = {"illusion:illusional_shard 6"}},
+            {items = {"illusion:beaty_shard 3"}}
+        }
+    },})
 
 minetest.register_craftitem("illusion:illusional_shard", {
 	description = "Used to craft illusion blocks",
