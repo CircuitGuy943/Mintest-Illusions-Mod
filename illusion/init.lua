@@ -1,10 +1,61 @@
 print("This file will be run at load time!")
 
+-- Define stairs with same textures as nodes
+
+minetest.register_node("illusion:blue_supernova_stairs", {
+	description = "Blue Supernova but in stairs!",
+	tiles = {
+		"BlueSupernova.png",
+	},
+	drawtype = "nodebox",
+	groups = {cracky = 3},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{0.0625, 0.4375, -0.5, 0.5, 0.5, 0.5}, -- NodeBox1
+			{-0.5, 0, -0.5, -0.0625, -0.0625, 0.5}, -- NodeBox2
+		}
+	}
+})
+
+minetest.register_node("illusion:square_wormhole_stairs", {
+	description = "Square Wormhole but in stairs!",
+	tiles = {
+		"SquareWormhole.png",
+	},
+	drawtype = "nodebox",
+	groups = {cracky = 3},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{0.0625, 0.4375, -0.5, 0.5, 0.5, 0.5}, -- NodeBox1
+			{-0.5, 0, -0.5, -0.0625, -0.0625, 0.5}, -- NodeBox2
+		}
+	}
+})
+
+minetest.register_node("illusion:quad_circle_stairs", {
+	description = "Quad Circle Illusion but in stairs!",
+	tiles = {
+		"CirclingQuadtriple.png",
+	},
+	drawtype = "nodebox",
+	groups = {cracky = 3},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{0.0625, 0.4375, -0.5, 0.5, 0.5, 0.5}, -- NodeBox1
+			{-0.5, 0, -0.5, -0.0625, -0.0625, 0.5}, -- NodeBox2
+		}
+	}
+})
+
 -- Define all craftitems and nodes
 
-minetest.register_node("illusion:test_node", {
+minetest.register_node("illusion:testing", {
+    description = "Testing node!",
 	tiles = {
-		"SquareWormhole.png"
+		"BlueSupernova.png"
 	},
 	is_ground_content = true,
 	groups = {cracky = 3},
@@ -89,7 +140,38 @@ minetest.register_node("illusion:bendy_circles", {
             {items = {"illusion:illusional_shard 6"}},
             {items = {"illusion:beaty_shard 3"}}
         }
-    },})
+    },
+})
+
+minetest.register_node("illusion:circle", {
+	description = "Most boring illusions block, trust me...",
+	tiles = {
+		"minetest_block.png"
+	},
+	is_ground_content = true,
+	groups = {cracky = 3},
+	drop = {
+        items = {
+            {items = {"illusion:illusional_shard 8"}},
+            {items = {"default:goldblock 1"}}
+        }
+    },
+})
+
+minetest.register_node("illusion:fidget_wormhole", {
+	description = "Weirdest block in this mod, by far.",
+	tiles = {
+		"FidgetWormhole.png"
+	},
+	is_ground_content = true,
+	groups = {cracky = 3},
+	drop = {
+        items = {
+            {items = {"illusion:illusional_shard 8"}},
+            {items = {"default:mese 1"}}
+        }
+    },
+})
 
 minetest.register_craftitem("illusion:illusional_shard", {
 	description = "Used to craft illusion blocks",
@@ -151,6 +233,24 @@ minetest.register_craft({
 		{"illusion:illusional_shard", "illusion:beaty_shard", "illusion:illusional_shard"},
 		{"illusion:illusional_shard", "illusion:beaty_shard", "illusion:illusional_shard"},
 		{"illusion:illusional_shard", "illusion:beaty_shard", "illusion:illusional_shard"}
+	}
+})
+
+minetest.register_craft({
+	output = "illusion:circle 9",
+	recipe = {
+		{"illusion:illusional_shard", "illusion:illusional_shard", "illusion:illusional_shard"},
+		{"illusion:illusional_shard", "default:goldblock", "illusion:illusional_shard"},
+		{"illusion:illusional_shard", "illusion:illusional_shard", "illusion:illusional_shard"}
+	}
+})
+
+minetest.register_craft({
+	output = "illusion:fidget_wormhole 9",
+	recipe = {
+		{"illusion:illusional_shard", "illusion:illusional_shard", "illusion:illusional_shard"},
+		{"illusion:illusional_shard", "default:mese", "illusion:illusional_shard"},
+		{"illusion:illusional_shard", "illusion:illusional_shard", "illusion:illusional_shard"}
 	}
 })
 
