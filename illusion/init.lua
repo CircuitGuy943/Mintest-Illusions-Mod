@@ -50,6 +50,102 @@ minetest.register_node("illusion:quad_circle_stairs", {
 	}
 })
 
+minetest.register_node("illusion:stacked_squares_stairs", {
+	description = "Stacked Squares Illusion but in stairs!",
+	tiles = {
+		"StackedSquares.png",
+	},
+	drawtype = "nodebox",
+	groups = {cracky = 3},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{0.0625, 0.4375, -0.5, 0.5, 0.5, 0.5}, -- NodeBox1
+			{-0.5, 0, -0.5, -0.0625, -0.0625, 0.5}, -- NodeBox2
+		}
+	}
+})
+
+minetest.register_node("illusion:quad_circle_stairs", {
+	description = "Quad Circle Illusion but in stairs!",
+	tiles = {
+		"CirclingQuadtriple.png",
+	},
+	drawtype = "nodebox",
+	groups = {cracky = 3},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{0.0625, 0.4375, -0.5, 0.5, 0.5, 0.5}, -- NodeBox1
+			{-0.5, 0, -0.5, -0.0625, -0.0625, 0.5}, -- NodeBox2
+		}
+	}
+})
+
+minetest.register_node("illusion:stacked_squares_stairs", {
+	description = "The Stacked Squares Illusion but in stairs!",
+	tiles = {
+		"StackedSquares.png",
+	},
+	drawtype = "nodebox",
+	groups = {cracky = 3},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{0.0625, 0.4375, -0.5, 0.5, 0.5, 0.5}, -- NodeBox1
+			{-0.5, 0, -0.5, -0.0625, -0.0625, 0.5}, -- NodeBox2
+		}
+	}
+})
+
+minetest.register_node("illusion:bendy_circles_stairs", {
+	description = "The Bendy Circles Illusion but in stairs!",
+	tiles = {
+		"OpticalYellowPurple.png",
+	},
+	drawtype = "nodebox",
+	groups = {cracky = 3},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{0.0625, 0.4375, -0.5, 0.5, 0.5, 0.5}, -- NodeBox1
+			{-0.5, 0, -0.5, -0.0625, -0.0625, 0.5}, -- NodeBox2
+		}
+	}
+})
+
+minetest.register_node("illusion:circle_stairs", {
+	description = "The original illusion but in stairs!",
+	tiles = {
+		"minetest_block.png",
+	},
+	drawtype = "nodebox",
+	groups = {cracky = 3},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{0.0625, 0.4375, -0.5, 0.5, 0.5, 0.5}, -- NodeBox1
+			{-0.5, 0, -0.5, -0.0625, -0.0625, 0.5}, -- NodeBox2
+		}
+	}
+})
+
+minetest.register_node("illusion:fidget_wormhole_stairs", {
+	description = "Fidget Wormhole Illusion but in stairs!",
+	tiles = {
+		"CirclingQuadtriple.png",
+	},
+	drawtype = "nodebox",
+	groups = {cracky = 3},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{0.0625, 0.4375, -0.5, 0.5, 0.5, 0.5}, -- NodeBox1
+			{-0.5, 0, -0.5, -0.0625, -0.0625, 0.5}, -- NodeBox2
+		}
+	}
+})
+
 -- Define all craftitems and nodes
 
 minetest.register_node("illusion:testing", {
