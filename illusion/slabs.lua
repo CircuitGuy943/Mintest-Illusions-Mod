@@ -1,0 +1,1 @@
+-- Define all slabs with the same textures as nodes
